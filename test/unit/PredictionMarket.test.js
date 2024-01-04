@@ -31,7 +31,9 @@ BET_AMOUNT = ethers.utils.parseEther("1")
 
               it("reverts if betamount is <= 0", async () => {
                   await expect(
-                      predictionMarket.placeBet(Party.Republican, { value: 0 }),
+                      predictionMarket.placeBet(Party.Republican, {
+                          value: ethers.utils.parseEther("0"),
+                      }),
                   ).to.be.revertedWith("PredictionMarket__NotEnoughEthSent")
               })
           })

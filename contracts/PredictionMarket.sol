@@ -70,7 +70,7 @@ contract PredictionMarket {
             revert PredictionMarket__ElectionFinished();
         }
         // if eth not sent revert
-        if (msg.value == 0) {
+        if (msg.value <= 0 ether) {
             revert PredictionMarket__NotEnoughEthSent();
         }
         bets[_party] += msg.value;
