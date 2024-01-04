@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "D:\\workstation\\solidity\\hardhat-prediction-market\\contracts\\PredictionMarket.sol": {
-      "lastModificationDate": 1704349815360,
-      "contentHash": "cb6f2e55286bb7a4ade1736ff788b6dc",
+    "/Users/bonheurbaleks/Documents/hardhat-prediction-market-moxk/contracts/PredictionMarket.sol": {
+      "lastModificationDate": 1699889427904,
+      "contentHash": "a30bc57b5efe18f2102a1c71659cb6ec",
       "sourceName": "contracts/PredictionMarket.sol",
       "solcConfig": {
         "version": "0.8.7",
