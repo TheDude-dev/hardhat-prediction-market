@@ -63,14 +63,14 @@ contract PredictionMarket {
 
     /* Main functions */
 
-    // function to place a bet on the election outcome
+    // to place a bet on the election outcome
     function placeBet(Party _party) external payable {
         // if election not finished revert
         if (s_eventstate != EventState.ONGOING) {
             revert PredictionMarket__ElectionFinished();
         }
         // if eth not sent revert
-        if (msg.value <= 0 ether) {
+        if (msg.value == 0) {
             revert PredictionMarket__NotEnoughEthSent();
         }
         bets[_party] += msg.value;
@@ -80,12 +80,13 @@ contract PredictionMarket {
     }
 
     function withdrawGain() external {
+        if (s_eventstate != EventState.FINISHED) {
+            revert PredictionMarket__ElectionNotFinished();
+        }
+
         uint gamblerBet = betsToGambler[msg.sender][s_result.winner]; // On if on winning side
         if (gamblerBet < 0) {
             revert PredictionMarket__NoWinningBets();
-        }
-        if (s_eventstate != EventState.FINISHED) {
-            revert PredictionMarket__ElectionNotFinished();
         }
 
         // Gain is proportianal to the initial bet of the winner and the loser pool
@@ -115,5 +116,9 @@ contract PredictionMarket {
         s_eventstate = EventState.FINISHED;
 
         // emit ResultReported(s_result.winner, s_result.loser);
+    }
+
+    function setEventState() external {
+        s_eventstate =EventState.FINISHED;
     }
 }

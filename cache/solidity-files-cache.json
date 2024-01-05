@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "D:\\workstation\\solidity\\hardhat-prediction-market\\contracts\\PredictionMarket.sol": {
-      "lastModificationDate": 1704355433820,
-      "contentHash": "e2d0a5279a8fef866a11f77df44781a1",
+      "lastModificationDate": 1704438847019,
+      "contentHash": "422c07a7ede0ff7ae9d7bdfdbe92e01f",
       "sourceName": "contracts/PredictionMarket.sol",
       "solcConfig": {
         "version": "0.8.7",
@@ -41,6 +41,48 @@
       ],
       "artifacts": [
         "PredictionMarket"
+      ]
+    },
+    "D:\\workstation\\solidity\\hardhat-prediction-market\\node_modules\\hardhat\\console.sol": {
+      "lastModificationDate": 1704348872056,
+      "contentHash": "896f68942c3a20e9ae3c3c5bfd3add54",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.7",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
       ]
     }
   }
